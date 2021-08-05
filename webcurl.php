@@ -5,10 +5,10 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 //get domain query
 $actions = array(      // Array of actions
-    'v4' => ' -4 ',
-    'v6' => ' -6 ',
-    'getheader' => ' -I ',
-    'verbose' => ' -v '
+    'v4' => '4',
+    'v6' => '6',
+    'getheader' => 'I',
+    'verbose' => 'v'
 );
 if (isset($_POST['curl1']))
 {   
@@ -25,13 +25,13 @@ if (isset($_POST['curl1']))
                 $ipv = $actions[$_POST['curl1']];
                 $ipv1 = $actions[$_POST['curl2']];
                 $ipv2 = $actions[$_POST['curl3']];
-                echo "<strong>Command Sample: curl $ipv $ipv1 $ipv2</strong>";
+                echo "<strong>Command Sample: curl -$ipv$ipv1$ipv2</strong>";
                 #echo "<code> $domain $ipv $ipv1 $ipv2</code>";
                 
                 
                 //execute shell command
                 #$shellexec = shell_exec("dig $domain $ipv $ipv1 $ipv2");
-                $shellexec = shell_exec("curl $ipv $ipv1 $domain");
+                $shellexec = shell_exec("curl -$ipv$ipv1$domain");
 
                 echo '<pre>'.htmlspecialchars($shellexec,ENT_QUOTES).'</pre>';
                 }   
