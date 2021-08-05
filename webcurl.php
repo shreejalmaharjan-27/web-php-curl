@@ -24,9 +24,9 @@ if (isset($_POST['curl1']))
     // disallow connection if domain has other than letters, numbers, and hyphens
     if (preg_match("/^[.A-Za-z0-9-]+$/", $domain)) {
         $nth = "";
-        if(isset($_POST['curl1']) ? $nth && array_key_exists($_POST['curl1'], $actions)) {
-         if(isset($_POST['curl2']) ? $nth && array_key_exists($_POST['curl2'], $actions)) { 
-         if(isset($_POST['curl3']) ? $nth && array_key_exists($_POST['curl3'], $actions)) {            
+        if(isset($_POST['curl1']) && array_key_exists($_POST['curl1'], $actions) ? $nth) {
+         if(isset($_POST['curl2']) && array_key_exists($_POST['curl2'], $actions) ? $nth) { 
+         if(isset($_POST['curl3']) && array_key_exists($_POST['curl3'], $actions) ? $nth) {            
                 //connect ipv4/v6
 
                 $ipv = $actions[$_POST['curl1']];
