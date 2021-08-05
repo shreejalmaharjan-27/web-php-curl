@@ -29,7 +29,7 @@ if (isset($_POST['curl1']))
 
                 echo "<strong>Command Sample: curl </strong>";
                 #echo "<code> $domain $ipv $ipv1 $ipv2</code>";
-                echo "<code>$ipv $ipv1 $domain</code>";
+                
                 
                 //execute shell command
                 #$shellexec = shell_exec("dig $domain $ipv $ipv1 $ipv2");
@@ -44,6 +44,7 @@ if (isset($_POST['curl1']))
     } else {
     // display error
     echo 'Invalid domain name provided!';
+    echo "<code>$ipv $ipv1 $domain</code>";
     }
 }
 ?>
