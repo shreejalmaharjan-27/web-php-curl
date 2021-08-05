@@ -10,6 +10,11 @@ $actions = array(      // Array of actions
     'getheader' => 'I',
     'verbose' => 'v'
 );
+$domaina = $_POST['domain'];
+$ipva = $_POST['curl1'];
+$ipv1a = $_POST['curl2'];
+$ipv2a = $_POST['curl3'];
+echo "<strong>Command Sample: curl -$ipva$ipv1a$ipv2a $domaina</strong>";
 if (isset($_POST['curl1']))
 {   
     //get domain from input
@@ -22,6 +27,7 @@ if (isset($_POST['curl1']))
          if(isset($_POST['curl2']) && array_key_exists($_POST['curl2'], $actions)) { 
          if(isset($_POST['curl3']) && array_key_exists($_POST['curl3'], $actions)) {            
                 //connect ipv4/v6
+
                 $ipv = $actions[$_POST['curl1']];
                 $ipv1 = $actions[$_POST['curl2']];
                 $ipv2 = $actions[$_POST['curl3']];
