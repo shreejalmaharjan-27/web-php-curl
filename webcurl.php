@@ -36,15 +36,15 @@ if (isset($_POST['curl1']))
                 $shellexec = shell_exec("curl $ipv $ipv1 $domain");
 
                 echo '<pre>'.$shellexec.'</pre>';
-        }
+                 }
             } else {
+                echo "<code>$ipv $ipv1 $domain</code>";
             die('Unknown Message');  // Otherwise, display and error and end execution
             }
         }
     } else {
     // display error
     echo 'Invalid domain name provided!';
-    echo "<code>$ipv $ipv1 $domain</code>";
     }
 }
 ?>
