@@ -25,7 +25,7 @@ if (isset($_POST['curl1']))
                 $ipv = $actions[$_POST['curl1']];
                 $ipv1 = $actions[$_POST['curl2']];
                 $ipv2 = $actions[$_POST['curl3']];
-                echo "<strong>Command Sample: curl -$ipv$ipv1$ipv2</strong>";
+                echo "<strong>Command Sample: curl -$ipv -$ipv1$ipv2</strong>";
                 #echo "<code> $domain $ipv $ipv1 $ipv2</code>";
                 
                 
