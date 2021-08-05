@@ -31,7 +31,7 @@ if (isset($_POST['curl1']))
                 #$shellexec = shell_exec("dig $domain $ipv $ipv1 $ipv2");
                 $shellexec = shell_exec("curl $ipv $ipv1 $domain");
 
-                echo '<pre>'.$shellexec.'</pre>';
+                echo '<pre>'.htmlspecialchars($shellexec,ENT_QUOTES).'</pre>';
                  
             } else {
             die('Unknown Message');  // Otherwise, display and error and end execution
