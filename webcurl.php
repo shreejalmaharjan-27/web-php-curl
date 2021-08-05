@@ -17,23 +17,23 @@ if (isset($_POST['curl1']))
     $domain = $_POST['domain'];
     
     // disallow connection if domain has other than letters, numbers, and hyphens
-    if (preg_match("/^[:.A-Za-z0-9-]+$/", $domain)) {
+    if (preg_match("/^[.A-Za-z0-9-]+$/", $domain)) {
         if(isset($_POST['curl1']) && array_key_exists($_POST['curl1'], $actions)) {
-         if(isset($_POST['ipversion1']) && array_key_exists($_POST['ipversion1'], $actions)) {
+         if(isset($_POST['curl2']) && array_key_exists($_POST['curl2'], $actions)) {
             if(isset($_POST['ipversion1']) && array_key_exists($_POST['ipversion2'], $actions)) {
             
                 //connect ipv4/v6
                 $ipv = $actions[$_POST['curl1']];
-                #$ipv1 = $actions[$_POST['ipversion1']];
-               # $ipv2 = $actions[$_POST['ipversion2']];
+                $ipv1 = $actions[$_POST['curl2']];
+                $ipv2 = $actions[$_POST['ipversion2']];
 
                 echo "<strong>Command Sample: curl </strong>";
                 #echo "<code> $domain $ipv $ipv1 $ipv2</code>";
-                echo "<code> $domain $ipv</code>";
+                echo "<code>$ipv $ipv1 $domain</code>";
                 
                 //execute shell command
                 #$shellexec = shell_exec("dig $domain $ipv $ipv1 $ipv2");
-                $shellexec = shell_exec("curl $ipv $domain");
+                $shellexec = shell_exec("curl $ipv $ipv1 $domain");
 
                 echo '<pre>'.$shellexec.'</pre>';
         }
