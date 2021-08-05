@@ -1,10 +1,14 @@
 <?php
+// debug
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 //get domain query
 $actions = array(      // Array of actions
-    'v4' => '-4',
-    'v6' => '-6',
-    'getheader' => '-I',
-    'verbose' => '-v'
+    'v4' => ' -4 ',
+    'v6' => ' -6 ',
+    'getheader' => ' -I ',
+    'verbose' => ' -v '
 );
 if (isset($_POST['curl1']))
 {   
