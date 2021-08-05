@@ -12,7 +12,7 @@
     <option value="v6">IPV6</option>
 </select>
 <input type="checkbox" value="getheader" name="curl2"><label>Get Head (-I)</label>
-<input type="checkbox" value="verbose" name="curl3"><label>Get Verbose Output (-v)</label>
+<input type="checkbox" value="verbose" name="curl2"><label>Get Verbose Output (-v)</label>
  <input name="submit" type="submit">
 </form>
 </body>
