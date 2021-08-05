@@ -20,12 +20,12 @@ if (isset($_POST['curl1']))
     if (preg_match("/^[.A-Za-z0-9-]+$/", $domain)) {
         if(isset($_POST['curl1']) && array_key_exists($_POST['curl1'], $actions)) {
          if(isset($_POST['curl2']) && array_key_exists($_POST['curl2'], $actions)) {
-            if(isset($_POST['ipversion1']) && array_key_exists($_POST['ipversion2'], $actions)) {
+            if(isset($_POST['curl3']) && array_key_exists($_POST['curl3'], $actions)) {
             
                 //connect ipv4/v6
                 $ipv = $actions[$_POST['curl1']];
                 $ipv1 = $actions[$_POST['curl2']];
-                $ipv2 = $actions[$_POST['ipversion2']];
+                $ipv2 = $actions[$_POST['curl3']];
 
                 echo "<strong>Command Sample: curl </strong>";
                 #echo "<code> $domain $ipv $ipv1 $ipv2</code>";
@@ -38,7 +38,6 @@ if (isset($_POST['curl1']))
                 echo '<pre>'.$shellexec.'</pre>';
                  }
             } else {
-                echo "<code>$ipv $ipv1 $domain</code>";
             die('Unknown Message');  // Otherwise, display and error and end execution
             }
         }
