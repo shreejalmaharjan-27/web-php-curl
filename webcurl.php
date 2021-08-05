@@ -9,7 +9,7 @@ $actions = array(      // Array of actions
     'v6' => '6',
     'getheader' => 'I',
     'verbose' => 'v',
-    '' => ''
+    null => ''
 );
 $domaina = $_POST['domain'];
 $ipva = $_POST['curl1'];
