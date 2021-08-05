@@ -23,7 +23,7 @@ if (isset($_POST['curl1']))
                 //connect ipv4/v6
                 $ipv = $actions[$_POST['curl1']];
                 $ipv1 = $actions[$_POST['curl2']];
-                echo "<strong>Command Sample: curl </strong>";
+                echo "<strong>Command Sample: curl $ipv $ipv1</strong>";
                 #echo "<code> $domain $ipv $ipv1 $ipv2</code>";
                 
                 
